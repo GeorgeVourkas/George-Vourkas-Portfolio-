@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-900">
+    <header class="w-full h-16 flex justify-between items-center px-12">
+      <h1 class="text-xl font-semibold">George Vourkas</h1>
+      <div class="buttonWrap h-full font-medium flex gap-6">
+        <button>Home</button>
+        <button>About</button>
+        <button>Projects</button>
+        <button>Contact</button>
+      </div>
+    </header>
+
+    <main class="w-full h-[45vh] flex flex-row">
+      <div class="w-1/2 h-full">
+        <div class="w-full h-3/4 flex flex-col justify-center pl-16">
+          <h1 class="font-semibold text-4xl">Hello.</h1>
+          <h2 class="font-medium text-2xl">
+            I'm <span class="underline decoration-blue-500 decoration-3">George</span>
+          </h2>
+          <h1 class="font-semibold text-4xl">Software Developer</h1>
+        </div>
+        <div class="w-full h-1/4 flex justify-center items-center gap-4">
+          <button class="w-[150px] h-[45px] rounded-md bg-blue-500">Get in touch</button>
+          <button
+            class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 transition duration-300 ease-in-out"
+          >
+            My resume
+          </button>
+        </div>
+      </div>
+
+      <div class="w-1/2 h-full flex justify-center items-center">
+        <img src="profile.jpg" alt="Profile Photo" class="h-5/6 rounded-full" />
+      </div>
+    </main>
+
+    <section class="decore w-full h-auto flex flex-wrap justify-evenly text-gray-400 mt-6">
+      <p class="mx-2">HTML</p>
+      <p class="mx-2">CSS</p>
+      <p class="mx-2">Javascript</p>
+      <p class="mx-2">React</p>
+      <p class="mx-2">Github</p>
+      <p class="mx-2">Tailwind</p>
+    </section>
+
+    <!-- About me -->
+    <section class="w-full h-[32vh] flex">
+      <div class="w-4/12 h-full flex flex-col justify-evenly items-center py-4">
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Website Development</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Frontend</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">React app</div>
+      </div>
+      <div class="w-8/12 h-full flex flex-col p-14 gap-4 items-center justify-center">
+        <h1 class="text-3xl font-semibold">About me</h1>
+        <p>I’m George from Thessaloniki, Greece, an inspiring Front-End Software Developer. 
+          I’m passionate about crafting intuitive and engaging digital experiences that people enjoy 
+          using. I love learning new technologies and finding creative ways to bring 
+          ideas to life on the web.
+        </p>
+      </div>
+
+     
+    </section>
+  </body>
+</html>

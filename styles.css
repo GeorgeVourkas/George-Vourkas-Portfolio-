@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f9ffff;
+}
+
+header button{
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+header button:hover{
+    background-color:#3B82F6;
+    transition: 0.3s ease-in-out;
+}
+
+.buttonWrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.decore p{
+    color: rgba(255,255,255,0.3);
+    font-size: 1.1rem;
+}
