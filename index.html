@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="profile.jpg">
+    <link rel="icon" href="resources/profile.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
   
@@ -38,14 +38,15 @@
         </div>
         <div class="w-full h-1/4 flex justify-center items-center gap-4 animateOnScroll">
           <a href="mailto:geovou04@gmail.com" target="_blank"><button class="w-[150px] h-[45px] rounded-md bg-blue-500 hover:bg-blue-400 transition">Get in touch</button></a>
+          <a href="resources/resume.pdf" download="GeorgeVourkas.pdf">
           <button class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 transition duration-300 ease-in-out">
             My resume
-          </button>
+          </button></a>
         </div>
       </div>
 
       <div class="w-1/2 h-full flex justify-center items-center">
-        <img src="profile.jpg" alt="Profile Photo" class="h-5/6 rounded-full" />
+        <img src="resources/profile.jpg" alt="Profile Photo" class="h-5/6 rounded-full" />
       </div>
     </main>
 
@@ -80,34 +81,40 @@
       <div id="projectSection" class="w-full flex flex-col justify-center items-center">
         <h1 class="text-3xl font-semibold my-6 animateOnScroll">Experience & Projects</h1>
         <!-- Printing Office -->
-         <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-800">
+         <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-800">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Printing Office Website</span> – Professional Experience, Mobile-Responsive</h1>
-          <p class="max-w-6xl animateOnScroll">As part of my professional experience, 
+          <p class="max-w-6xl animateOnScroll mb-14">As part of my professional experience, 
             I developed a multi-page, mobile-responsive website for a printing office in 
             Kastoria using vanilla JavaScript. This site allows customers to easily navigate services, 
             explore the portfolio, and contact the office. Designed with usability and clarity in mind, it delivers a smooth 
             browsing experience across desktop and mobile, reflecting real-world client work and hands-on experience in web development.<br>
             View the websiteat:&nbsp;<a href="https://www.inprint.gr/" target="_blank" class="text-blue-400"> https://www.inprint.gr/</a>
           </p>
+          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/inprint1.png" alt="printing office site photo 1">
+          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/inprint2.png" alt="printing office site photo 2">
         </div>    
         <!-- Ai recipe generator -->
-        <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-700">
+        <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-700">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> – Cook with What You Have</h1>
-          <p class="max-w-6xl animateOnScroll">
+          <p class="max-w-6xl animateOnScroll mb-14">
             Built with React and powered by the Claude AI API, 
             this app helps you turn your ingredients into delicious recipes. 
             Simply enter what you have in your kitchen, and get instant, creative recipe suggestions. 
             Quick, easy, and fun—your personal AI cooking assistant.
           </p>
+          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef.png" alt="Ai chef photo">
         </div>    
         <!-- Weather App -->
-        <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-600">
+        <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-600">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Weather App</span> – Simple & Accurate Weather Updates</h1>
-          <p class="max-w-6xl animateOnScroll">Built with React and powered by the OpenWeather API, 
+          <p class="max-w-6xl animateOnScroll mb-14">Built with React and powered by the OpenWeather API, 
             this app provides real-time weather information for your location. 
             Check the current temperature, weather conditions, and basic details 
             like humidity and wind speed, all in a clean and easy-to-use interface. 
-            Stay informed and plan your day effortlessly.</p>
+            Stay informed and plan your day effortlessly.
+          </p>
+          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/geoweather1.png" alt="geoweather photo 1">
+          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/geoweather2.png" alt="geoweather photo 2">
         </div>
       </div>
 
