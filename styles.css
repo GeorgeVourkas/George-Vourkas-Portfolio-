@@ -28,3 +28,15 @@ header button:hover{
     color: rgba(255,255,255,0.3);
     font-size: 1.1rem;
 }
+/* Animation */
+.animateOnScroll {
+  opacity: 0;
+  transform: translateY(50px); /* start slightly below */
+  transition: all 0.8s ease-out;
+}
+
+/* When element is visible */
+.animateOnScroll.visible {
+  opacity: 1;
+  transform: translateY(0); /* move to original position */
+}

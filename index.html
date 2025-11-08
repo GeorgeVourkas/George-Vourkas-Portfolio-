@@ -28,7 +28,7 @@
     <main class="w-full h-[50vh] flex flex-row">
       <div class="w-1/2 h-full">
         <div class="w-full h-3/4 flex flex-col justify-center items-center">
-          <div>
+          <div class="animateOnScroll">
             <h1 class="font-semibold text-4xl">Hello.</h1>
             <h2 class="font-medium text-2xl">
               I'm <span class="underline decoration-blue-500 decoration-3">George</span>
@@ -36,7 +36,7 @@
             <h1 class="font-semibold text-4xl">Software Developer</h1>
           </div>
         </div>
-        <div class="w-full h-1/4 flex justify-center items-center gap-4">
+        <div class="w-full h-1/4 flex justify-center items-center gap-4 animateOnScroll">
           <a href="mailto:geovou04@gmail.com" target="_blank"><button class="w-[150px] h-[45px] rounded-md bg-blue-500 hover:bg-blue-400 transition">Get in touch</button></a>
           <button class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 transition duration-300 ease-in-out">
             My resume
@@ -49,7 +49,7 @@
       </div>
     </main>
 
-    <section class="decore w-full h-auto flex flex-wrap justify-evenly text-gray-400 mt-6">
+    <section class="decore w-full h-auto flex flex-wrap justify-evenly text-gray-400 mt-6 animateOnScroll">
       <p class="mx-2">HTML</p>
       <p class="mx-2">CSS</p>
       <p class="mx-2">Javascript</p>
@@ -60,12 +60,12 @@
 
     <!-- About me -->
     <section  id="aboutMeSection"  class="w-full h-[55vh] flex">
-      <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4">
+      <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll">
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Website Development</div>
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Frontend</div>
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">React app</div>
       </div>
-      <div class="w-7/12 h-full max-w-4xl flex flex-col p-14 gap-4 items-left justify-center">
+      <div class="w-7/12 h-full max-w-4xl flex flex-col p-14 gap-4 items-left justify-center animateOnScroll">
         <h1 class="text-3xl font-semibold"><span class="underline decoration-blue-500 decoration-3">About me</span></h1>
         <p>I’m George from Thessaloniki, Greece, an inspiring Front-End Software Developer. 
           I’m passionate about crafting intuitive and engaging digital experiences that people enjoy 
@@ -78,11 +78,11 @@
     <!-- Projects -->
     <section class="w-full h-auto">
       <div id="projectSection" class="w-full flex flex-col justify-center items-center">
-        <h1 class="text-3xl font-semibold my-6">Experience & Projects</h1>
+        <h1 class="text-3xl font-semibold my-6 animateOnScroll">Experience & Projects</h1>
         <!-- Printing Office -->
          <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-800">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Printing Office Website</span> – Professional Experience, Mobile-Responsive</h1>
-          <p class="max-w-6xl">As part of my professional experience, 
+          <p class="max-w-6xl animateOnScroll">As part of my professional experience, 
             I developed a multi-page, mobile-responsive website for a printing office in 
             Kastoria using vanilla JavaScript. This site allows customers to easily navigate services, 
             explore the portfolio, and contact the office. Designed with usability and clarity in mind, it delivers a smooth 
@@ -93,7 +93,7 @@
         <!-- Ai recipe generator -->
         <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-700">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> – Cook with What You Have</h1>
-          <p class="max-w-6xl">
+          <p class="max-w-6xl animateOnScroll">
             Built with React and powered by the Claude AI API, 
             this app helps you turn your ingredients into delicious recipes. 
             Simply enter what you have in your kitchen, and get instant, creative recipe suggestions. 
@@ -103,14 +103,19 @@
         <!-- Weather App -->
         <div class="w-full h-[35vh] p-14 flex flex-col justify-center items-center bg-gray-600">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Weather App</span> – Simple & Accurate Weather Updates</h1>
-          <p class="max-w-6xl">Built with React and powered by the OpenWeather API, 
+          <p class="max-w-6xl animateOnScroll">Built with React and powered by the OpenWeather API, 
             this app provides real-time weather information for your location. 
             Check the current temperature, weather conditions, and basic details 
             like humidity and wind speed, all in a clean and easy-to-use interface. 
             Stay informed and plan your day effortlessly.</p>
         </div>
-
       </div>
+
+    </section>
+
+    <!-- Contact section -->
+    <section class="w-full h-auto">
+      <h1 class="text-3xl font-semibold my-6">Contact information</h1>
 
     </section>
   <script src="index.js"></script>
