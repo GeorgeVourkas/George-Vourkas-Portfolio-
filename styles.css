@@ -3,7 +3,9 @@
     font-family: inter;
     color: #f9ffff;
 }
-
+header{
+    background-color: rgba(0,0,0,0.3);
+}
 header button{
     height: 40px;
     width: 90px;
