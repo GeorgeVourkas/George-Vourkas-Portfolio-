@@ -52,7 +52,7 @@ if(homeButton){
 }
 
 if(menuButton){
-  menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', () => {
     const menuSection = document.getElementById("mobileMenu");
     menuSection.classList.toggle("show"); // toggle the menu
 
