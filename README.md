@@ -29,7 +29,7 @@ The website is designed with a clean, modern UI and fully responsive layout usin
 
 ---
 
-## 🌍 Live Demo
+## 🌍 Live
 
 🔗 [View Portfolio Website](https://georgevourkas.com)
 
