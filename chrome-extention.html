@@ -4,13 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <title>Document</title>
+    <title>Recipin | Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chrome-extention.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="resources/myLogoCircle.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <main class="w-screen h-screen bg-gray-900">
-        <header class="w-full h-[7vh]">
+<body class="bg-gray-900">
+    <!-- Header Start -->
+    <header class="sticky top-0 w-full h-[7vh] flex justify-between items-center px-12">
+        <h1 class="text-xl font-semibold">George Vourkas</h1>
+        <div class="buttonWrap h-full font-medium flex gap-6 max-[650px]:hidden">
+            <a href="index.html#homeSection">
+            <button id="homeButton">Home</button>
+            </a>
 
-        </header>
-    </main>
+            <a href="index.html#aboutMeSection">
+            <button id="aboutButton">About</button>
+            </a>
+
+            <a href="index.html#projectSection">
+            <button id="projectButton">Projects</button>
+            </a>
+
+            <a href="index.html#certificationSection">
+            <button id="certificationsButton">Certifications</button>
+            </a>
+
+            <a href="index.html#contactSection">
+            <button id="contactButton">Contact</button>
+            </a>
+
+        </div>
+        <button id="menuButton" class="hidden max-[650px]:block text-2xl">☰</button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="menu" id="mobileMenu">
+            <a href="index.html#homeSection">
+            <button id="homeButton">Home</button>
+            </a>
+
+            <a href="index.html#aboutMeSection">
+            <button id="aboutButton">About</button>
+            </a>
+
+            <a href="index.html#projectSection">
+            <button id="projectButton">Projects</button>
+            </a>
+
+            <a href="index.html#certificationSection">
+            <button id="certificationsButton">Certifications</button>
+            </a>
+
+            <a href="index.html#contactSection">
+            <button id="contactButton">Contact</button>
+            </a>
+    </div>
+
+<!-- Header end -->
+    <section class="w-full flex flex-col justify-center items-center max-w-[650px]: px-12 max-w-[650px]: pt-20">
+        <div class="w-full h-[20vh] flex flex-col justify-center items-center">
+                <h1 class="text-2xl font-semibold mb-5">
+                <span class="underline decoration-blue-500 decoration-3">Recipin</span> – Save Recipes in One Click
+                </h1>
+                <h3 class="text-lg">Here is how you can set up the Recipin extention on your computer</h3>
+        </div>
+        <div class="w-full flex justify-start max-w-[500px] py-6 ">
+            <ul class="list-decimal pl-6 space-y-5">
+                
+                <li>
+                    <p>Step 1: Download the <strong>Recipin.zip</strong> file.</p>
+                    <a href="resources/Recipin.zip" download>
+                        <p class="underline font-semibold text-blue-500 hover:text-blue-700 transition-colors">
+                        👉 Click here to download
+                        </p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>Step 2: Unzip the <strong>Recipin.zip</strong> file and save the extracted folder in your preferred location.</p>
+                </li>
+
+                <li>
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <p>Step 3: Open Chrome and go to 
+                        <code id="chromeLink" class="px-2 py-1 rounded">chrome://extensions/</code>
+                        </p>
+                        <button onclick="copyText()" class="px-2 py-1 bg-gray-700 rounded hover:bg-gray-800 transition">📋 Copy</button>
+                    </div>
+                </li>
+
+                <li>
+                    <p>Step 4: Enable <strong>Developer mode</strong> by toggling the switch in the top right corner.</p>
+                </li>
+
+                <li>
+                    <p>Step 5: Click the <strong>“Load unpacked”</strong> button and select the unzipped <strong>Recipin</strong> folder.</p>
+                </li>
+
+                <li>
+                    <p>Step 6: Click the <strong>Extensions</strong> icon (puzzle piece) in the top-right corner of your browser and pin <strong>Recipin</strong> for quick access.</p>
+                </li>
+
+                <li>
+                    <div class="pt-4">
+                        <h2 class="text-lg font-bold text-green-600">🎉 Congratulations!</h2>
+                        <p>You can now save your favorite recipes instantly with just one click!</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <script src="index.js"></script>
+  <script src="chrome_extention.js"></script>
 </body>
 </html>

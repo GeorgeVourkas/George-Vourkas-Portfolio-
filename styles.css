@@ -6,6 +6,9 @@
 a{
     text-decoration: none;
 }
+button{
+    transition: 0.3s ease-in-out;
+}
 header{
     background-color: rgba(0,0,0,0.3);
     backdrop-filter:blur(10px);
@@ -22,7 +25,7 @@ header button{
 
 header button:hover{
     background-color:#3B82F6;
-    transition: 0.3s ease-in-out;
+
 }
 .menu{
     position: fixed;
