@@ -45,7 +45,11 @@ window.addEventListener("scroll", handleScrollAnimation);
 window.addEventListener("load", handleScrollAnimation);
 
 
-function copyText() {
-  const text = document.getElementById('chromeLink').textContent
-  navigator.clipboard.writeText(text)
-}
+//---------Copy Button------
+const copyButton = document.getElementById("copyButton")
+
+copyButton.addEventListener('click', ()=>{
+  navigator.clipboard.writeText("chrome://extensions/")
+  console.log("Link has been copied to clipboard")
+})
+
