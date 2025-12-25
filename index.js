@@ -1,4 +1,4 @@
-// Get the button elements
+ // Get the button elements
 const aboutButton = document.getElementById("aboutButton");
 const projectButton = document.getElementById("projectButton");
 const homeButton = document.getElementById("homeButton");
