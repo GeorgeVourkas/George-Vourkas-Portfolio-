@@ -60,7 +60,7 @@ if(menuButton){
 }
 // -------Mobile-----
 
-  const mobileButtons = document.querySelectorAll('.mobileButton');
+const mobileButtons = document.querySelectorAll('.mobileButton');
 
 mobileButtons.forEach(button => {
   button.addEventListener('click', () => {

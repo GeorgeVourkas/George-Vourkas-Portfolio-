@@ -61,20 +61,20 @@
     </main>
 
     <section class="decore w-full h-auto flex flex-wrap justify-evenly text-gray-400 mt-6 animateOnScroll">
-      <p class="mx-2">HTML</p>
-      <p class="mx-2">CSS</p>
+      <p class="mx-2">AI</p>
       <p class="mx-2">Javascript</p>
       <p class="mx-2">React</p>
+      <p class="mx-2">Angular</p>
       <p class="mx-2">Github</p>
-      <p class="mx-2">Tailwind</p>
+      <p class="mx-2">Springboot</p>
     </section>
 
     <!-- About me -->
     <section  id="aboutMeSection"  class="w-full h-[55vh] flex max-[650px]:h-auto max-[650px]:flex-col">
       <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll max-[650px]:w-full max-[650px]:h-[30vh]">
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Website Development</div>
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Frontend</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Website Applications</div>
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">React app</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">AI Applications</div>
       </div>
       <div class="w-7/12 h-full max-w-4xl flex flex-col p-8 gap-4 items-left justify-center animateOnScroll max-[650px]:w-full max-[650px]:h-1/2">
         <h1 class="text-3xl font-semibold"><span class="underline decoration-blue-500 decoration-3">About me</span></h1>
@@ -90,11 +90,31 @@
       <div class="w-full flex flex-col justify-center items-center">
         <!-- <h1 class="text-3xl font-semibold my-6 animateOnScroll">Experience & Projects</h1> -->
         
-        <!-- FRONTEND START -->
-        <section class="w-full h-auto flex justify-center items-center bg-gray-900">
-          <h1 class="text-3xl font-semibold my-6 animateOnScroll py-[50px] underline decoration-blue-500 decoration-3">Frontend Projects</h1>
-        </section>
-
+    
+        <!-- Ai recipe generator -->
+        <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-700">
+          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> - Cook with What You Have</h1>
+          <p class="max-w-6xl animateOnScroll mb-14">
+            Built with React and powered by the Claude AI API, 
+            this app helps you turn your ingredients into delicious recipes. 
+            Simply enter what you have in your kitchen, and get instant, creative recipe suggestions. 
+            Plus, never lose a favorite meal again, save your top picks directly to the integrated 
+            Spring Boot and PostgreSQL library for easy access later.
+            Quick, easy, and fun-your personal AI cooking assistant.
+          </p>
+          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef.png" alt="Ai chef photo">
+          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef2.png" alt="Ai chef photo">
+          <video 
+            src="resources/aiChef.mov" 
+            class="w-7/12 max-w-4xl rounded-md mt-6 animateOnScroll"
+            controls
+            autoplay
+            muted
+            loop
+          >
+            Your browser does not support the video tag.
+          </video>        
+        </div>  
         <!-- Printing Office -->
          <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-800">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Printing Office Website</span> - Professional Experience, Mobile-Responsive</h1>
@@ -108,17 +128,7 @@
           <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/inprint1.png" alt="printing office site photo 1">
           <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/inprint2.png" alt="printing office site photo 2">
         </div>    
-        <!-- Ai recipe generator -->
-        <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-700">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> - Cook with What You Have</h1>
-          <p class="max-w-6xl animateOnScroll mb-14">
-            Built with React and powered by the Claude AI API, 
-            this app helps you turn your ingredients into delicious recipes. 
-            Simply enter what you have in your kitchen, and get instant, creative recipe suggestions. 
-            Quick, easy, and fun-your personal AI cooking assistant.
-          </p>
-          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef.png" alt="Ai chef photo">
-        </div>    
+  
 
         <!-- Recipin chrome extendion -->
          <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-600">
@@ -149,11 +159,7 @@
         </div>
       </div>
     
-    
-    <!-- BACKEND START -->
-    <section class="w-full h-auto flex justify-center items-center bg-gray-700">
-      <h1 class="text-3xl font-semibold my-6 animateOnScroll py-[50px] underline decoration-blue-500 decoration-3">Backend Projects</h1>
-    </section>
+  
     <!-- Global Landmarks REST API -->
     <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-800">
       <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Global Landmarks API</span> - Explore Unique Places Worldwide</h1>
