@@ -95,4 +95,28 @@ header button:hover{
   transform: translateY(0); /* move to original position */
 }
 
+    .cert-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+    }
     
+    .cert-content.open {
+        max-height: 1000px;
+        opacity: 1;
+        padding: 1.5rem;
+    }
+    
+    .cert-content.open ~ .border-t {
+        display: block;
+    }
+    
+    .toggle-icon {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .toggle-icon.rotated {
+        transform: rotate(180deg);
+    }

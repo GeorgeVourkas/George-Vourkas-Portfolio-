@@ -48,7 +48,7 @@
         </div>
         <div class="w-full h-1/4 flex justify-center items-center gap-4 animateOnScroll">
           <a href="mailto:geovou04@gmail.com" target="_blank"><button class="w-[150px] h-[45px] rounded-md bg-blue-500 hover:bg-blue-400 transition">Get in touch</button></a>
-          <a href="resources/georgevourkas.pdf" download="GeorgeVourkas.pdf">
+          <a href="resources/georgevourkas.pdf" download="gvourkas_resume.pdf">
           <button class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 ">
             My resume
           </button></a>
@@ -170,40 +170,131 @@
       <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/glAPI_2.png" alt="geoweather photo 2">
     </div>
 
-    <!-- Cerifications -->
-     <section id="certificationSection" class="w-full h-auto flex flex-col justify-center items-center py-12">
-        <h1 class="text-3xl font-semibold my-6">Certifications</h1>
-        <!--Javascript-->
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Javascript</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Javascript.jpg" alt="Javascript Cerification">
-        </div>
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Intro to AI engineering</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Intro to AI engineering.png" alt="AI Cerification">
-        </div>
-        <!-- React -->
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">React</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/react.jpg" alt="React Cerification">
-        </div>
-        <!-- Command Line -->
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Command Line</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/cmd.jpg" alt="Command Line Cerification">
-        </div>
-        <!-- UI -->
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">UI Design</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/UI.jpg" alt="UI Design Cerification">
-        </div>
-        <!-- Tailwind -->
-        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Tailwind CSS</span> - Scrimba</h1>
-          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Tailwind.jpg" alt="Tailwind Design Cerification">
-        </div>        
-     </section>
+<!-- Certifications -->
+  <section id="certificationSection" class="w-full flex flex-col justify-center items-center py-12 px-4">
+      <h1 class="text-4xl font-semibold mb-12">Certifications</h1>
+      
+      <div class="w-full max-w-3xl space-y-3">
+          <!-- Javascript -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-0">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">Javascript</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-0" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/Javascript.jpg" alt="Javascript Certification">
+              </div>
+          </div>
 
+          <!-- Intro to AI Engineering -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-1">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">Intro to AI Engineering</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-1" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/Intro to AI engineering.png" alt="AI Engineering Certification">
+              </div>
+          </div>
+
+          <!-- NumPy -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-2">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">NumPy</h3>
+                          <p class="text-sm text-gray-600">GreatLearning</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-2" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/NumPy.jpg" alt="NumPy Certification">
+              </div>
+          </div>
+
+          <!-- React -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-3">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">React</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-3" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/react.jpg" alt="React Certification">
+              </div>
+          </div>
+
+          <!-- Command Line -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-4">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">Command Line</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-4" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/cmd.jpg" alt="Command Line Certification">
+              </div>
+          </div>
+
+          <!-- UI Design -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-5">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">UI Design</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-5" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/UI.jpg" alt="UI Design Certification">
+              </div>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-6">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">Tailwind CSS</h3>
+                          <p class="text-sm text-gray-600">Scrimba</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
+              </button>
+              <div id="cert-6" class="cert-content bg-gray-50 border-t border-gray-200">
+                  <img class="w-full rounded-md" src="resources/Tailwind.jpg" alt="Tailwind CSS Certification">
+              </div>
+          </div>
+      </div>
+  </section>
     <!-- Contact section -->
     <section id="contactSection" class="w-full h-auto flex flex-col justify-center items-center py-24 bg-gray-800 ">
       <h1 class="text-3xl font-semibold my-6">Contact information</h1>

@@ -1,4 +1,4 @@
- // Get the button elements
+// Get the button elements
 const aboutButton = document.getElementById("aboutButton");
 const projectButton = document.getElementById("projectButton");
 const homeButton = document.getElementById("homeButton");
@@ -15,7 +15,6 @@ if (aboutButton) {
   });
 }
 
-
 if (projectButton) {
   projectButton.addEventListener("click", () => {
     const projectSection = document.getElementById("projectSection");
@@ -27,7 +26,9 @@ if (projectButton) {
 
 if (certificationsButton) {
   certificationsButton.addEventListener("click", () => {
-    const certificationSection = document.getElementById("certificationSection");
+    const certificationSection = document.getElementById(
+      "certificationSection",
+    );
     if (certificationSection) {
       certificationSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -43,41 +44,37 @@ if (contactButton) {
   });
 }
 
-
-if(homeButton){
-  homeButton.addEventListener('click',()=>{
-    window.scrollTo({top:0,behavior:'smooth'})
-  })
- 
+if (homeButton) {
+  homeButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
-if(menuButton){
-    menuButton.addEventListener('click', () => {
+if (menuButton) {
+  menuButton.addEventListener("click", () => {
     const menuSection = document.getElementById("mobileMenu");
     menuSection.classList.toggle("show"); // toggle the menu
-
   });
 }
 // -------Mobile-----
 
-const mobileButtons = document.querySelectorAll('.mobileButton');
+const mobileButtons = document.querySelectorAll(".mobileButton");
 
-mobileButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const targetId = button.getAttribute('data-target');
+mobileButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.getAttribute("data-target");
     const targetSection = document.getElementById(targetId);
 
     if (targetId === "homeSection") {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
 
     // close menu
-    document.getElementById('mobileMenu').classList.remove('show');
+    document.getElementById("mobileMenu").classList.remove("show");
   });
 });
-
 
 // Animation
 
@@ -85,7 +82,10 @@ const scrollElements = document.querySelectorAll(".animateOnScroll");
 
 const elementInView = (el, offset = 0) => {
   const elementTop = el.getBoundingClientRect().top;
-  return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) - offset
+  );
 };
 
 const displayScrollElement = (el) => {
@@ -103,4 +103,18 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", handleScrollAnimation);
 window.addEventListener("load", handleScrollAnimation);
 
+document.querySelectorAll(".cert-toggle").forEach((button) => {
+  button.addEventListener("click", function () {
+    const target = document.getElementById(this.dataset.target);
+    const isOpen = target.classList.contains("open");
+    const icon = this.querySelector(".toggle-icon");
 
+    if (isOpen) {
+      target.classList.remove("open");
+      icon.classList.remove("rotated");
+    } else {
+      target.classList.add("open");
+      icon.classList.add("rotated");
+    }
+  });
+});
