@@ -48,7 +48,7 @@
         </div>
         <div class="w-full h-1/4 flex justify-center items-center gap-4 animateOnScroll">
           <a href="mailto:geovou04@gmail.com" target="_blank"><button class="w-[150px] h-[45px] rounded-md bg-blue-500 hover:bg-blue-400 transition">Get in touch</button></a>
-          <a href="resources/georgevourkas.pdf" download="gvourkas_resume.pdf">
+          <a href="resources/GeorgeVourkas.pdf" download="GeorgeVourkas.pdf">
           <button class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 ">
             My resume
           </button></a>
@@ -173,9 +173,25 @@
 <!-- Certifications -->
   <section id="certificationSection" class="w-full flex flex-col justify-center items-center py-12 px-4">
       <h1 class="text-4xl font-semibold mb-12">Certifications</h1>
-      
       <div class="w-full max-w-3xl space-y-3">
+                  <!-- AI IBM -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-4">
+                  <div class="flex items-center gap-3">
+                      <span class="text-blue-500 font-bold text-lg">+</span>
+                      <div>
+                          <h3 class="text-lg font-semibold text-gray-900">Introduction to Artificial Intelligence</h3>
+                          <p class="text-sm text-gray-600">IBM</p>
+                      </div>
+                  </div>
+                  <span class="text-gray-400 transition-transform toggle-icon rotated">▼</span>
+              </button>
+              <div id="cert-4" class="cert-content bg-gray-50 border-t border-gray-200 open">
+                  <img class="w-full rounded-md" src="resources/CourseraAiIntro.png" alt="Command Line Certification">
+              </div>
+          </div>
           <!-- Javascript -->
+  
           <div class="border border-gray-300 rounded-lg overflow-hidden">
               <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-0">
                   <div class="flex items-center gap-3">
@@ -240,23 +256,6 @@
               </button>
               <div id="cert-3" class="cert-content bg-gray-50 border-t border-gray-200">
                   <img class="w-full rounded-md" src="resources/react.jpg" alt="React Certification">
-              </div>
-          </div>
-
-          <!-- Command Line -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-4">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">Command Line</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-4" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/cmd.jpg" alt="Command Line Certification">
               </div>
           </div>
 
