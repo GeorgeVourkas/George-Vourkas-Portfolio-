@@ -1,325 +1,734 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>George Vourkas | Software Developer</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="resources/myLogoCircle.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="resources/myLogoCircle.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="bg-gray-900">
-  <header class="sticky top-0 w-full h-[50px] flex justify-between items-center px-12 ">
-    <h1 class="text-xl font-semibold">George Vourkas</h1>
-    <div class="buttonWrap h-full font-medium flex gap-6 max-[650px]:hidden">
-      <button id="homeButton">Home</button>
-      <button id="aboutButton">About</button>
-      <button id="projectButton">Projects</button>
-      <button id="certificationsButton">Certifications</button>
-      <button id="contactButton">Contact</button>
+  <body
+    class="bg-gray-950 text-gray-100 font-['Inter',sans-serif] antialiased selection:bg-blue-500 selection:text-white"
+  >
+    <!-- Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full h-16 backdrop-blur-md bg-gray-950/80 border-b border-gray-800/60 flex justify-between items-center px-6 md:px-12 transition-all"
+    >
+      <h1
+        class="text-xl font-bold tracking-tight bg-gradient-to-r text-white bg-clip-text text-transparent"
+      >
+        George Vourkas
+      </h1>
+      <div
+        class="buttonWrap h-full font-medium flex items-center gap-8 max-[650px]:hidden text-sm text-gray-400"
+      >
+        <button id="homeButton" class="hover:text-blue-400 transition-colors">
+          Home
+        </button>
+        <button id="aboutButton" class="hover:text-blue-400 transition-colors">
+          About
+        </button>
+        <button
+          id="projectButton"
+          class="hover:text-blue-400 transition-colors"
+        >
+          Projects
+        </button>
+        <button
+          id="certificationsButton"
+          class="hover:text-blue-400 transition-colors"
+        >
+          Certifications
+        </button>
+        <button
+          id="contactButton"
+          class="hover:text-blue-400 transition-colors"
+        >
+          Contact
+        </button>
+      </div>
+      <button
+        id="menuButton"
+        class="hidden max-[650px]:block text-2xl text-gray-300 hover:text-white focus:outline-none"
+      >
+        ☰
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      class="menu hidden max-[650px]:flex flex-col bg-gray-900 border-b border-gray-800 p-4 gap-3 text-gray-300"
+      id="mobileMenu"
+    >
+      <button
+        class="mobileButton text-left py-2 hover:text-blue-400"
+        data-target="homeSection"
+      >
+        Home
+      </button>
+      <button
+        class="mobileButton text-left py-2 hover:text-blue-400"
+        data-target="aboutMeSection"
+      >
+        About
+      </button>
+      <button
+        class="mobileButton text-left py-2 hover:text-blue-400"
+        data-target="projectSection"
+      >
+        Projects
+      </button>
+      <button
+        class="mobileButton text-left py-2 hover:text-blue-400"
+        data-target="certificationSection"
+      >
+        Certifications
+      </button>
+      <button
+        class="mobileButton text-left py-2 hover:text-blue-400"
+        data-target="contactSection"
+      >
+        Contact
+      </button>
     </div>
-    <button id="menuButton" class="hidden max-[650px]:block text-2xl">☰</button>
-  </header>
 
-  <!-- Mobile Menu -->
-  <div class="menu" id="mobileMenu">
-      <button class="mobileButton" data-target="homeSection">Home</button>
-      <button class="mobileButton" data-target="aboutMeSection">About</button>
-      <button class="mobileButton" data-target="projectSection">Projects</button>
-      <button class="mobileButton" data-target="certificationSection">Certifications</button>
-      <button class="mobileButton" data-target="contactSection">Contact</button>
-  </div>
-
-
-    <main class="w-full h-[50vh] min-h-[300px] flex flex-row max-[650px]:flex-col-reverse max-[650px]:h-auto">
-      <div class="w-1/2 h-full py-16 max-[650px]:w-full">
-        <div class="w-full h-3/4 flex flex-col justify-center items-center max-[650px]:mb-14">
-          <div class="animateOnScroll">
-            <h1 class="font-semibold text-4xl">Hello!</h1>
-            <h2 class="font-medium text-2xl">
-              I'm <span class="underline decoration-blue-500 decoration-3">George</span>
-            </h2>
-            <h1 class="font-semibold text-4xl">Software Developer</h1>
-          </div>
+    <!-- Hero Section -->
+    <main
+      class="max-w-7xl mx-auto min-h-[75vh] px-6 py-12 flex flex-row items-center justify-between max-[650px]:flex-col-reverse max-[650px]:py-8"
+    >
+      <div
+        class="w-1/2 flex flex-col justify-center max-[650px]:w-full max-[650px]:items-center max-[650px]:text-center"
+      >
+        <div class="animateOnScroll space-y-3 mb-8">
+          <span
+            class="text-blue-400 font-semibold tracking-wide text-sm uppercase"
+            >Welcome to my portfolio</span
+          >
+          <h1
+            class="font-extrabold text-5xl sm:text-6xl tracking-tight leading-none text-white"
+          >
+            Hello!
+          </h1>
+          <h2 class="font-medium text-2xl sm:text-3xl text-gray-300">
+            I'm
+            <span
+              class="text-white underline decoration-blue-500 decoration-4 underline-offset-4"
+              >George</span
+            >
+          </h2>
+          <p
+            class="font-bold text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 pt-1"
+          >
+            Software Developer
+          </p>
         </div>
-        <div class="w-full h-1/4 flex justify-center items-center gap-4 animateOnScroll">
-          <a href="mailto:geovou04@gmail.com" target="_blank"><button class="w-[150px] h-[45px] rounded-md bg-blue-500 hover:bg-blue-400 transition">Get in touch</button></a>
+        <div class="flex items-center gap-4 animateOnScroll">
+          <a href="mailto:geovou04@gmail.com" target="_blank">
+            <button
+              class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 font-semibold text-sm text-white shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 transition duration-200"
+            >
+              Get in touch
+            </button>
+          </a>
           <a href="resources/GeorgeVourkas.pdf" download="GeorgeVourkas.pdf">
-          <button class="w-[150px] h-[45px] rounded-md border-2 border-blue-500 hover:bg-blue-500 ">
-            My resume
-          </button></a>
+            <button
+              class="px-6 py-3 rounded-lg border border-gray-700 bg-gray-900/60 hover:bg-gray-800 hover:border-blue-500 font-semibold text-sm text-gray-200 transition duration-200"
+            >
+              My resume
+            </button>
+          </a>
         </div>
       </div>
 
-      <div class="w-1/2 h-full flex justify-center items-center max-[650px]:w-full max-[650px]:h-auto max-[650px]:pt-16">
-        <img src="resources/profile.jpg" alt="Profile Photo" class="w-5/6 max-w-[300px] rounded-full max-[650px]:w-4/6" />
+      <div
+        class="w-1/2 flex justify-center items-center max-[650px]:w-full max-[650px]:mb-8"
+      >
+        <div class="relative group">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-500"
+          ></div>
+          <img
+            src="resources/profile.jpg"
+            alt="Profile Photo"
+            class="relative w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full border-2 border-gray-800 shadow-2xl"
+          />
+        </div>
       </div>
     </main>
 
-    <section class="decore w-full h-auto flex flex-wrap justify-evenly text-gray-400 mt-6 animateOnScroll">
-      <p class="mx-2">AI</p>
-      <p class="mx-2">Javascript</p>
-      <p class="mx-2">React</p>
-      <p class="mx-2">Angular</p>
-      <p class="mx-2">Github</p>
-      <p class="mx-2">Springboot</p>
+    <!-- Tech Stack Pill Ribbon -->
+    <section
+      class="decore max-w-5xl mx-auto w-full py-8 px-6 flex flex-wrap justify-center gap-3 text-sm font-medium text-gray-400 border-y border-gray-800/60 animateOnScroll"
+    >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >React</span
+      >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >JavaScript</span
+      >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >TypeScript</span
+      >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >Angular</span
+      >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >Express JS</span
+      >
+      <span
+        class="px-4 py-1.5 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:text-gray-200 transition"
+        >Spring Boot</span
+      >
     </section>
 
-    <!-- About me -->
-    <section  id="aboutMeSection"  class="w-full h-[55vh] flex max-[650px]:h-auto max-[650px]:flex-col">
-      <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll max-[650px]:w-full max-[650px]:h-[30vh]">
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Website Applications</div>
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">React app</div>
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">AI Applications</div>
+    <!-- About Me Section -->
+    <section
+      id="aboutMeSection"
+      class="max-w-6xl mx-auto py-24 px-6 flex items-center max-[650px]:flex-col gap-12"
+    >
+      <div class="w-1/3 flex flex-col gap-4 animateOnScroll max-[650px]:w-full">
+        <div
+          class="p-4 bg-gray-900/40 border-l-4 border-blue-500 rounded-r-lg text-gray-200 font-medium shadow-sm"
+        >
+          Web Applications
+        </div>
+        <div
+          class="p-4 bg-gray-900/40 border-l-4 border-blue-500 rounded-r-lg text-gray-200 font-medium shadow-sm"
+        >
+          React Apps
+        </div>
+        <div
+          class="p-4 bg-gray-900/40 border-l-4 border-blue-500 rounded-r-lg text-gray-200 font-medium shadow-sm"
+        >
+          FullStack Development
+        </div>
       </div>
-      <div class="w-7/12 h-full max-w-4xl flex flex-col p-8 gap-4 items-left justify-center animateOnScroll max-[650px]:w-full max-[650px]:h-1/2">
-        <h1 class="text-3xl font-semibold"><span class="underline decoration-blue-500 decoration-3">About me</span></h1>
-        <p>I'm George, a Software Developer based in Thessaloniki, Greece. 
-          I’m passionate about crafting intuitive, engaging and user-focused digital experiences that people love to use. 
-          I enjoy exploring new technologies and finding creative, meaningful ways to bring ideas to life.
+      <div
+        class="w-2/3 flex flex-col gap-4 justify-center animateOnScroll max-[650px]:w-full"
+      >
+        <h2 class="text-3xl font-bold text-white">
+          <span
+            class="underline decoration-blue-500 decoration-4 underline-offset-8"
+            >About me</span
+          >
+        </h2>
+        <p class="text-gray-300 text-lg leading-relaxed pt-2">
+          I'm George, a Software Developer based in Thessaloniki, Greece. I hold
+          a Bachelor's degree in Applied Informatics & Computer Science from the
+          University of Macedonia. I’m passionate about crafting intuitive,
+          engaging, and user-focused digital experiences that people love to
+          use. I enjoy exploring new technologies and finding creative,
+          meaningful ways to bring ideas to life.
         </p>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section  id="projectSection" class="w-full h-auto pt-8">
-      <div class="w-full flex flex-col justify-center items-center">
-        <!-- <h1 class="text-3xl font-semibold my-6 animateOnScroll">Experience & Projects</h1> -->
-        
-    
-        <!-- Ai recipe generator -->
-        <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-700">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> - Cook with What You Have</h1>
-          <p class="max-w-6xl animateOnScroll mb-14">
-            Built with React and powered by the Claude AI API, 
-            this app helps you turn your ingredients into delicious recipes. 
-            Simply enter what you have in your kitchen, and get instant, creative recipe suggestions. 
-            Plus, never lose a favorite meal again, save your top picks directly to the integrated 
-            Spring Boot and PostgreSQL library for easy access later.
-            Quick, easy, and fun-your personal AI cooking assistant.
-          </p>
-          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef.png" alt="Ai chef photo">
-          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef2.png" alt="Ai chef photo">
-          <video 
-            src="resources/aiChef.mov" 
-            class="w-10/12 max-w-4xl rounded-md mt-6 animateOnScroll"
-            controls
-            muted
-            loop
-          >
-            Your browser does not support the video tag.
-          </video>        
-        </div>  
-        <!-- Printing Office -->
-         <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-800">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Printing Office Website</span> - Professional Experience, Mobile-Responsive</h1>
-          <p class="max-w-6xl animateOnScroll mb-14">As part of my professional experience, 
-            I developed a multi-page, mobile-responsive website for a printing office in 
-            Kastoria using vanilla JavaScript. This site allows customers to easily navigate services, 
-            explore the portfolio, and contact the office. Designed with usability and clarity in mind, it delivers a smooth 
-            browsing experience across desktop and mobile, reflecting real-world client work and hands-on experience in web development.<br>
-            View the website at:&nbsp;<a href="https://www.inprint.gr/" target="_blank" class="text-blue-400"> https://www.inprint.gr/</a>
-          </p>
-          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/inprint1.png" alt="printing office site photo 1">
-          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/inprint2.png" alt="printing office site photo 2">
-        </div>    
-  
+    <!-- Professional Experience Section -->
+    <section id="experienceSection" class="max-w-6xl mx-auto py-12 px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white tracking-tight">
+          Professional Experience
+        </h2>
+        <div class="w-16 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+      </div>
 
-        <!-- Recipin chrome extendion -->
-         <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-600">
-            <h1 class="text-2xl font-semibold mb-5">
-              <span class="underline decoration-blue-500 decoration-3">Recipin</span> - Save Recipes in One Click
-            </h1>
-            <p class="max-w-6xl animateOnScroll mb-14">
-              Recipin is a modern, minimal Chrome extension designed to make saving recipes effortless. 
-              Just type a name and hit save - the extension automatically stores the page URL using the Chrome API. 
-              With its clean and intuitive interface, Recipin keeps your favorite cooking ideas organized and just a click away. 
-              Simple, sleek, and built for everyday use.
+      <div
+        class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 sm:p-8 animateOnScroll max-w-4xl mx-auto shadow-md"
+      >
+        <div
+          class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4"
+        >
+          <div>
+            <h3 class="text-xl font-bold text-white">
+              Full-Stack Engineer Intern
+            </h3>
+            <p class="text-blue-400 font-medium">Dataviva</p>
+          </div>
+          <span
+            class="text-sm font-semibold text-gray-400 bg-gray-950 px-3 py-1 rounded-full border border-gray-800 mt-2 sm:mt-0"
+          >
+            2026 (3 months)
+          </span>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+          Worked as a Full-Stack Engineer intern for 3 months, gaining hands-on
+          professional software engineering experience by contributing to web
+          applications and system features.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projectSection" class="w-full py-16">
+      <div class="max-w-6xl mx-auto px-6 mb-12 text-center">
+        <h2 class="text-3xl font-bold text-white tracking-tight">
+          Featured Projects
+        </h2>
+        <div class="w-16 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="space-y-16">
+        <!-- AI Recipe Generator -->
+        <div
+          class="w-full py-12 px-6 bg-gray-900/40 border-y border-gray-800/80 flex flex-col justify-center items-center"
+        >
+          <div class="max-w-4xl w-full">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <span
+                class="underline decoration-blue-500 decoration-3 underline-offset-4"
+                >AI Recipe Generator</span
+              >
+              – Cook with What You Have
+            </h3>
+            <p class="text-gray-300 leading-relaxed animateOnScroll mb-8">
+              Built with React and powered by the Claude AI API, this app helps
+              you turn your ingredients into delicious recipes. Simply enter
+              what you have in your kitchen, and get instant, creative recipe
+              suggestions. Plus, save your top picks directly to the integrated
+              Spring Boot and PostgreSQL library for easy access later.
             </p>
-            <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/recipin.png" alt="Recipin chrome extension preview">
-            <a href="chrome-extention.html"><button class="w-[200px] bg-blue-500 mt-6 py-3 rounded-full hover:w-[220px] animateOnScroll">Download for yourself</button></a>
+            <div class="space-y-6 flex flex-col items-center">
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/aiChef.png"
+                alt="Ai chef photo"
+              />
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/aiChef2.png"
+                alt="Ai chef photo"
+              />
+              <video
+                src="resources/aiChef.mov"
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                controls
+                muted
+                loop
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Printing Office Website -->
+        <div
+          class="w-full py-12 px-6 bg-gray-900/80 border-y border-gray-800 flex flex-col justify-center items-center"
+        >
+          <div class="max-w-4xl w-full">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <span
+                class="underline decoration-blue-500 decoration-3 underline-offset-4"
+                >Printing Office Website</span
+              >
+              – Full-Stack Web Application
+            </h3>
+            <p class="text-gray-300 leading-relaxed animateOnScroll mb-8">
+              As part of my professional experience, I developed a multi-page,
+              mobile-responsive full-stack application for a printing office in
+              Kastoria using React, Express.js, and PostgreSQL. Designed with
+              usability and performance in mind, it combines an intuitive
+              React-driven client experience with a robust backend for dynamic
+              data and service management.<br />
+              <span class="inline-block mt-2"
+                >View the website at:
+                <a
+                  href="https://www.inprint.gr/"
+                  target="_blank"
+                  class="text-blue-400 hover:text-blue-300 underline font-medium transition"
+                  >https://www.inprint.gr/</a
+                >
+              </span>
+            </p>
+            <div class="space-y-6 flex flex-col items-center">
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/inprint1.png"
+                alt="printing office site photo 1"
+              />
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/inprint2.png"
+                alt="printing office site photo 2"
+              />
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/inprint3.png"
+                alt="printing office site photo 2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipin Chrome Extension -->
+        <div
+          class="w-full py-12 px-6 bg-gray-900/40 border-y border-gray-800/80 flex flex-col justify-center items-center"
+        >
+          <div class="max-w-4xl w-full flex flex-col items-center">
+            <div class="w-full">
+              <h3 class="text-2xl font-bold text-white mb-4">
+                <span
+                  class="underline decoration-blue-500 decoration-3 underline-offset-4"
+                  >Recipin</span
+                >
+                – Save Recipes in One Click
+              </h3>
+              <p class="text-gray-300 leading-relaxed animateOnScroll mb-8">
+                Recipin is a modern, minimal Chrome extension designed to make
+                saving recipes effortless. Just type a name and hit save – the
+                extension automatically stores the page URL using the Chrome
+                API. With its clean interface, Recipin keeps your favorite
+                cooking ideas organized.
+              </p>
+            </div>
+            <img
+              class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll mb-6"
+              src="resources/recipin.png"
+              alt="Recipin chrome extension preview"
+            />
+            <a href="chrome-extention.html" class="animateOnScroll">
+              <button
+                class="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-200"
+              >
+                Download Extension
+              </button>
+            </a>
+          </div>
         </div>
 
         <!-- Weather App -->
-        <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-500">
-          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Weather App</span> - Simple & Accurate Weather Updates</h1>
-          <p class="max-w-6xl animateOnScroll mb-14">
-            Built with React and powered by the OpenWeather API, 
-            this app provides real-time weather information for your location. 
-            Check the current temperature, weather conditions, and basic details 
-            like humidity and wind speed, all in a clean and easy-to-use interface. 
-            Stay informed and plan your day effortlessly.</p>
-          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/geoweather1.png" alt="geoweather photo 1">
-          <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/geoweather2.png" alt="geoweather photo 2">
-        </div>
-      </div>
-    
-  
-    <!-- Global Landmarks REST API -->
-    <div class="w-full h-auto p-8 flex flex-col justify-center items-center bg-gray-800">
-      <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Global Landmarks API</span> - Explore Unique Places Worldwide</h1>
-      <p class="max-w-6xl animateOnScroll mb-14">
-        A Node.js REST API built as a backend service that provides structured data about unique natural locations around the world. The API supports filtering via URL query parameters and was developed and tested locally as a backend-only project.
-
-      </p>
-      <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/glAPI_1.png" alt="geoweather photo 1">
-      <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/glAPI_2.png" alt="geoweather photo 2">
-    </div>
-
-<!-- Certifications -->
-  <section id="certificationSection" class="w-full flex flex-col justify-center items-center py-12 px-4">
-      <h1 class="text-4xl font-semibold mb-12">Certifications</h1>
-      <div class="w-full max-w-3xl space-y-3">
-                  <!-- AI IBM -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-4">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">Introduction to Artificial Intelligence</h3>
-                          <p class="text-sm text-gray-600">IBM</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon rotated">▼</span>
-              </button>
-              <div id="cert-4" class="cert-content bg-gray-50 border-t border-gray-200 open">
-                  <img class="w-full rounded-md" src="resources/CourseraAiIntro.png" alt="Command Line Certification">
-              </div>
+        <div
+          class="w-full py-12 px-6 bg-gray-900/80 border-y border-gray-800 flex flex-col justify-center items-center"
+        >
+          <div class="max-w-4xl w-full">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <span
+                class="underline decoration-blue-500 decoration-3 underline-offset-4"
+                >Weather App</span
+              >
+              – Real-Time Forecasts
+            </h3>
+            <p class="text-gray-300 leading-relaxed animateOnScroll mb-8">
+              Built with React and powered by the OpenWeather API, this app
+              provides real-time weather information for your location. Check
+              current temperatures, conditions, humidity, and wind speeds in a
+              minimal interface.
+            </p>
+            <div class="space-y-6 flex flex-col items-center">
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/geoweather1.png"
+                alt="geoweather photo 1"
+              />
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/geoweather2.png"
+                alt="geoweather photo 2"
+              />
+            </div>
           </div>
-          <!-- Javascript -->
-  
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-0">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">Javascript</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-0" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/Javascript.jpg" alt="Javascript Certification">
-              </div>
-          </div>
-
-          <!-- Intro to AI Engineering -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-1">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">Intro to AI Engineering</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-1" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/Intro to AI engineering.png" alt="AI Engineering Certification">
-              </div>
-          </div>
-
-          <!-- NumPy -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-2">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">NumPy</h3>
-                          <p class="text-sm text-gray-600">GreatLearning</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-2" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/NumPy.jpg" alt="NumPy Certification">
-              </div>
-          </div>
-
-          <!-- React -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-3">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">React</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-3" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/react.jpg" alt="React Certification">
-              </div>
-          </div>
-
-          <!-- UI Design -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-5">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">UI Design</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-5" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/UI.jpg" alt="UI Design Certification">
-              </div>
-          </div>
-
-          <!-- Tailwind CSS -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button class="cert-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left" data-target="cert-6">
-                  <div class="flex items-center gap-3">
-                      <span class="text-blue-500 font-bold text-lg">+</span>
-                      <div>
-                          <h3 class="text-lg font-semibold text-gray-900">Tailwind CSS</h3>
-                          <p class="text-sm text-gray-600">Scrimba</p>
-                      </div>
-                  </div>
-                  <span class="text-gray-400 transition-transform toggle-icon">▼</span>
-              </button>
-              <div id="cert-6" class="cert-content bg-gray-50 border-t border-gray-200">
-                  <img class="w-full rounded-md" src="resources/Tailwind.jpg" alt="Tailwind CSS Certification">
-              </div>
-          </div>
-      </div>
-  </section>
-    <!-- Contact section -->
-    <section id="contactSection" class="w-full h-auto flex flex-col justify-center items-center py-24 bg-gray-800 ">
-      <h1 class="text-3xl font-semibold my-6">Contact information</h1>
-      <div class="w-full h-auto flex justify-evenly items-center animateOnScroll flex-row max-[650px]:flex-col">
-
-        <!-- Github -->
-        <div class="w-1/6 h-[32vh] py-12 flex flex-col items-center gap-6 rounded-md max-[650px]:w-11/12">
-          <img class="h-24" src="resources/github.png" alt="Github Logo">
-          <a href="https://github.com/GeorgeVourkas" target="_blank"><button class="infoButtons">Github</button></a>
         </div>
 
-        <!-- Mail -->
-        <div class="w-1/6 h-[32vh] py-12 flex flex-col items-center gap-6 rounded-md max-[650px]:w-11/12">
-          <img class="h-24" src="resources/mail.png" alt="Email Logo">
-          <a href="mailto:geovou04@gmail.com" target="_blank"><button class="infoButtons">Email</button></a>
+        <!-- Global Landmarks API -->
+        <div
+          class="w-full py-12 px-6 bg-gray-900/40 border-y border-gray-800/80 flex flex-col justify-center items-center"
+        >
+          <div class="max-w-4xl w-full">
+            <h3 class="text-2xl font-bold text-white mb-4">
+              <span
+                class="underline decoration-blue-500 decoration-3 underline-offset-4"
+                >Global Landmarks API</span
+              >
+              – Backend Service
+            </h3>
+            <p class="text-gray-300 leading-relaxed animateOnScroll mb-8">
+              A Node.js REST API built as a backend service providing structured
+              data about unique natural locations worldwide. Features query
+              parameter filtering for robust data fetching.
+            </p>
+            <div class="space-y-6 flex flex-col items-center">
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/glAPI_1.png"
+                alt="geoweather photo 1"
+              />
+              <img
+                class="w-full rounded-xl shadow-2xl border border-gray-800 animateOnScroll"
+                src="resources/glAPI_2.png"
+                alt="geoweather photo 2"
+              />
+            </div>
+          </div>
         </div>
-
-        <!-- Linked in -->
-        <div class="w-1/6 h-[32vh] py-12 flex flex-col items-center gap-6 rounded-md max-[650px]:w-11/12">
-          <img class="h-24" src="resources/linkedin.png" alt="linkedin Logo">
-          <a href="https://www.linkedin.com/in/george-vourkas/" target="_blank"><button class="infoButtons">LinkedIn</button></a>
-        </div>
-        
       </div>
     </section>
-    
-  <script src="index.js"></script>
+
+    <!-- Certifications Section -->
+    <section
+      id="certificationSection"
+      class="w-full py-20 px-6 max-w-4xl mx-auto flex flex-col justify-center items-center"
+    >
+      <h2 class="text-3xl font-bold text-white mb-8">Certifications</h2>
+
+      <div class="w-full space-y-4">
+        <!-- React -->
+        <div
+          class="border border-gray-800 bg-gray-900/60 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            class="cert-toggle w-full flex items-center justify-between p-5 hover:bg-gray-800/50 transition-colors text-left"
+            data-target="cert-3"
+          >
+            <div class="flex items-center gap-4">
+              <span class="text-blue-400 font-bold text-lg">+</span>
+              <div>
+                <h3 class="text-lg font-semibold text-white">React</h3>
+                <p class="text-sm text-gray-400">Scrimba</p>
+              </div>
+            </div>
+            <span class="text-gray-400 transition-transform toggle-icon"
+              >▼</span
+            >
+          </button>
+          <div
+            id="cert-3"
+            class="cert-content bg-gray-950 p-4 border-t border-gray-800 open"
+          >
+            <img
+              class="w-full rounded-lg"
+              src="resources/react.jpg"
+              alt="React Certification"
+            />
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div
+          class="border border-gray-800 bg-gray-900/60 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            class="cert-toggle w-full flex items-center justify-between p-5 hover:bg-gray-800/50 transition-colors text-left"
+            data-target="cert-0"
+          >
+            <div class="flex items-center gap-4">
+              <span class="text-blue-400 font-bold text-lg">+</span>
+              <div>
+                <h3 class="text-lg font-semibold text-white">JavaScript</h3>
+                <p class="text-sm text-gray-400">Scrimba</p>
+              </div>
+            </div>
+            <span class="text-gray-400 transition-transform toggle-icon"
+              >▼</span
+            >
+          </button>
+          <div
+            id="cert-0"
+            class="cert-content bg-gray-950 p-4 border-t border-gray-800"
+          >
+            <img
+              class="w-full rounded-lg"
+              src="resources/Javascript.jpg"
+              alt="Javascript Certification"
+            />
+          </div>
+        </div>
+
+        <!-- Intro to AI Engineering -->
+        <div
+          class="border border-gray-800 bg-gray-900/60 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            class="cert-toggle w-full flex items-center justify-between p-5 hover:bg-gray-800/50 transition-colors text-left"
+            data-target="cert-1"
+          >
+            <div class="flex items-center gap-4">
+              <span class="text-blue-400 font-bold text-lg">+</span>
+              <div>
+                <h3 class="text-lg font-semibold text-white">
+                  Intro to AI Engineering
+                </h3>
+                <p class="text-sm text-gray-400">Scrimba</p>
+              </div>
+            </div>
+            <span class="text-gray-400 transition-transform toggle-icon"
+              >▼</span
+            >
+          </button>
+          <div
+            id="cert-1"
+            class="cert-content bg-gray-950 p-4 border-t border-gray-800"
+          >
+            <img
+              class="w-full rounded-lg"
+              src="resources/Intro to AI engineering.png"
+              alt="AI Engineering Certification"
+            />
+          </div>
+        </div>
+
+        <!-- UI Design -->
+        <div
+          class="border border-gray-800 bg-gray-900/60 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            class="cert-toggle w-full flex items-center justify-between p-5 hover:bg-gray-800/50 transition-colors text-left"
+            data-target="cert-5"
+          >
+            <div class="flex items-center gap-4">
+              <span class="text-blue-400 font-bold text-lg">+</span>
+              <div>
+                <h3 class="text-lg font-semibold text-white">UI Design</h3>
+                <p class="text-sm text-gray-400">Scrimba</p>
+              </div>
+            </div>
+            <span class="text-gray-400 transition-transform toggle-icon"
+              >▼</span
+            >
+          </button>
+          <div
+            id="cert-5"
+            class="cert-content bg-gray-950 p-4 border-t border-gray-800"
+          >
+            <img
+              class="w-full rounded-lg"
+              src="resources/UI.jpg"
+              alt="UI Design Certification"
+            />
+          </div>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div
+          class="border border-gray-800 bg-gray-900/60 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            class="cert-toggle w-full flex items-center justify-between p-5 hover:bg-gray-800/50 transition-colors text-left"
+            data-target="cert-6"
+          >
+            <div class="flex items-center gap-4">
+              <span class="text-blue-400 font-bold text-lg">+</span>
+              <div>
+                <h3 class="text-lg font-semibold text-white">Tailwind CSS</h3>
+                <p class="text-sm text-gray-400">Scrimba</p>
+              </div>
+            </div>
+            <span class="text-gray-400 transition-transform toggle-icon"
+              >▼</span
+            >
+          </button>
+          <div
+            id="cert-6"
+            class="cert-content bg-gray-950 p-4 border-t border-gray-800"
+          >
+            <img
+              class="w-full rounded-lg"
+              src="resources/Tailwind.jpg"
+              alt="Tailwind CSS Certification"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contactSection"
+      class="w-full py-24 bg-gray-900/60 border-t border-gray-800"
+    >
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold text-white mb-12">Contact Information</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animateOnScroll">
+          <!-- GitHub -->
+          <div
+            class="p-8 bg-gray-950 border border-gray-800 rounded-2xl flex flex-col items-center gap-6 hover:border-gray-700 transition group"
+          >
+            <div
+              class="p-4 bg-gray-900 rounded-full group-hover:scale-110 transition duration-300"
+            >
+              <img
+                class="h-10 w-10 object-contain"
+                src="resources/github.png"
+                alt="Github Logo"
+              />
+            </div>
+            <a
+              href="https://github.com/GeorgeVourkas"
+              target="_blank"
+              class="w-full"
+            >
+              <button
+                class="w-full py-2.5 px-4 rounded-lg border border-gray-700 hover:bg-blue-600 hover:border-blue-600 text-sm font-semibold text-gray-200 hover:text-white transition duration-200"
+              >
+                GitHub
+              </button>
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div
+            class="p-8 bg-gray-950 border border-gray-800 rounded-2xl flex flex-col items-center gap-6 hover:border-gray-700 transition group"
+          >
+            <div
+              class="p-4 bg-gray-900 rounded-full group-hover:scale-110 transition duration-300"
+            >
+              <img
+                class="h-10 w-10 object-contain"
+                src="resources/mail.png"
+                alt="Email Logo"
+              />
+            </div>
+            <a href="mailto:geovou04@gmail.com" target="_blank" class="w-full">
+              <button
+                class="w-full py-2.5 px-4 rounded-lg border border-gray-700 hover:bg-blue-600 hover:border-blue-600 text-sm font-semibold text-gray-200 hover:text-white transition duration-200"
+              >
+                Email
+              </button>
+            </a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div
+            class="p-8 bg-gray-950 border border-gray-800 rounded-2xl flex flex-col items-center gap-6 hover:border-gray-700 transition group"
+          >
+            <div
+              class="p-4 bg-gray-900 rounded-full group-hover:scale-110 transition duration-300"
+            >
+              <img
+                class="h-10 w-10 object-contain"
+                src="resources/linkedin.png"
+                alt="LinkedIn Logo"
+              />
+            </div>
+            <a
+              href="https://www.linkedin.com/in/george-vourkas/"
+              target="_blank"
+              class="w-full"
+            >
+              <button
+                class="w-full py-2.5 px-4 rounded-lg border border-gray-700 hover:bg-blue-600 hover:border-blue-600 text-sm font-semibold text-gray-200 hover:text-white transition duration-200"
+              >
+                LinkedIn
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
